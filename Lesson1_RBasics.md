@@ -1,15 +1,36 @@
 R is a programming language for statistical computing and data science. It's open source, meaning there's lots of people creating packages for you to use and lots of online help. Great visualization. Here you can find their website with lots of cool info: https://www.r-project.org/
 
-If you want to follow along with me, you MUST FIRST: 
+If you want to follow along with me, you should first: 
 - Download R 
-- download RStudio 
+- Download RStudio 
 
 To download R, go here: https://mirror.its.dal.ca/cran/
-On this page, download the appropropriate file for your computer (Mac or Windows) 
 
 To download RStudio, go here: https://rstudio.com/products/rstudio/download/
-Scroll down to find the version best for you (Mac, Windows, etc...) 
-Only download the free version, don't pay for anything
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

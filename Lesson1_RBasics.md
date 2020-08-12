@@ -7,9 +7,10 @@ If you want to follow along with me, you should first:
 - Download RStudio 
 
 To download R, go here: https://mirror.its.dal.ca/cran/
+
 To download RStudio, go here: https://rstudio.com/products/rstudio/download/
 
-<h2>R Studio</h2>
+<h2>R Studio layout</h2>
  
 R Studio is where we will work with R.
 It is classified as a Integrated Development Environment which gives us a whole toolset in one program to edit, run, and debug code. 
@@ -30,25 +31,49 @@ Below the history and environment tabs, we have a bunch of miscellaneous tabs. F
 
     ?plot
 
-##Variables 
-Assign with <- 
-Recall by typing the name in the console 
-Workspace 
-Where all your variables and objects are stored 
+<h2>Variables</h2> 
+
+In the console, you can use * / + - to do calculations.
+
+    > 4*2 
+    > 8
+
+But, you can also use variables to get these answers. 
+
+You can assign values to a variable with <- or = 
+
+    > x <- 5 
+    
+You can then recall that varibale by typing the name in the console 
+
+    > x 
+    > 5 
+    
+    
+After making that variable, it will appear in your environment on the righthand side
 Print all variables by typing ls() 
-Lists all vars but not values 
-EX:
-Height <- 4 
-Width <- 2 
-Height * Width 
-8
-Area <- Height*Width 
-R Script 
-Text file with R commands 
-Can store all your code and can then “Run” it
-Each line with be consecutively executed 
-Can go back and edit your script 
-Types of Data 
+This lists all variables but not their values. 
+
+Let's do an example:
+    
+    > Height <- 4 
+    > Width <- 2 
+    > Height * Width 
+    > 8
+
+You can also assign that answer to a variable itself:
+
+    > Area <- Height*Width 
+    > Area 
+    > 8 
+        
+<h2>R Script</h2>
+
+If you want to save your script to work on it later, you should make .R file. Do this by typing Ctrl + Shift + N and save your new file.
+This is a text file with R commands where you can store all your code and can then “Run” it.
+Each line will be consecutively executed. You can go back and edit your script at a later date as well. 
+
+<h2>Types of Data<h2/>
 class() will reveal the type of data 
 Logicals
 class(TRUE)

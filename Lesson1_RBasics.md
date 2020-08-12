@@ -1,3 +1,5 @@
+<h1> Lesson 1. R Basics 
+
 R is a programming language for statistical computing and data science. It's open source, meaning there's lots of people creating packages for you to use and lots of online help. Great visualization. Here you can find their website with lots of cool info: https://www.r-project.org/
 
 If you want to follow along with me, you should first: 
@@ -5,39 +7,29 @@ If you want to follow along with me, you should first:
 - Download RStudio 
 
 To download R, go here: https://mirror.its.dal.ca/cran/
-
 To download RStudio, go here: https://rstudio.com/products/rstudio/download/
 
+<h1> R Studio
+ 
+R Studio is where we will work with R.
+It is classified as a Integrated Development Environment which gives us a whole toolset in one program to edit, run, and debug code. 
+ 
+R Strudio is comprised of a few sections. First, you have the source tab, which shows you your files that you can use to write, edit, and save your scripts. To make a new file, you can click  the green square in the top left or hit Ctrl + Shift + N. This will make a new .R file where you can write R code.
 
+Next, we have the console tab, which is just below the source tab. Here, you can type commands and see results immediately. For instance, you can type in
 
+    >  4*3 
+    
+And then R will solve this equation and give you: 
 
+    > 12
+    
+On the top righthand side, you can see the Environment/History tabs. Under Environment, R Studio will list all the variables and objects you have created in either the console or by running your source code.The History tab will show you all the commands you've typed into the console or any commands completed by running your code.
 
+Below the history and environment tabs, we have a bunch of miscellaneous tabs. First, the files tab shows you all of the files you can use and open. Here, you can load in any files, environments, datasets, etc. The plots tab will show you any plots you generate while working. The packages tab allows you to see what packages you have installed currently and can let you download/install any other ones you are interested in. The help tab can be used to search for anything in R that you want to learn more about. Alternatively, you can type a question mark before any command in the console and the help tab will automatically pull up that information for you. 
 
+    ?plot
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Console
-Used to execute R commands 
-We will use RStudio 
-Variables 
 Assign with <- 
 Recall by typing the name in the console 
 Workspace 

@@ -1,6 +1,6 @@
-<h2>Lesson 1. R Basics 
+<h2>Lesson 1. R Basics </h2>
 
-<h5>R is a programming language for statistical computing and data science. It's open source, meaning there's lots of people creating packages for you to use and lots of online help. Great visualization. Here you can find their website with lots of cool info: https://www.r-project.org/
+R is a programming language for statistical computing and data science. It's open source, meaning there's lots of people creating packages for you to use and lots of online help. Great visualization. Here you can find their website with lots of cool info: https://www.r-project.org/
 
 If you want to follow along with me, you should first: 
 - Download R 
@@ -9,7 +9,7 @@ If you want to follow along with me, you should first:
 To download R, go here: https://mirror.its.dal.ca/cran/
 To download RStudio, go here: https://rstudio.com/products/rstudio/download/
 
-<h2>R Studio
+<h2>R Studio</h2>
  
 R Studio is where we will work with R.
 It is classified as a Integrated Development Environment which gives us a whole toolset in one program to edit, run, and debug code. 

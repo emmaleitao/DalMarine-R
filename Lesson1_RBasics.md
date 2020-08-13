@@ -23,20 +23,20 @@ Next, we have the console tab, which is just below the source tab. Here, you can
     
 And then R will solve this equation and give you: 
 
-    > 12
+    [1] 12
     
 On the top righthand side, you can see the Environment/History tabs. Under Environment, R Studio will list all the variables and objects you have created in either the console or by running your source code.The History tab will show you all the commands you've typed into the console or any commands completed by running your code.
 
 Below the history and environment tabs, we have a bunch of miscellaneous tabs. First, the files tab shows you all of the files you can use and open. Here, you can load in any files, environments, datasets, etc. The plots tab will show you any plots you generate while working. The packages tab allows you to see what packages you have installed currently and can let you download/install any other ones you are interested in. The help tab can be used to search for anything in R that you want to learn more about. Alternatively, you can type a question mark before any command in the console and the help tab will automatically pull up that information for you. 
 
-    ?plot
+    > ?plot
 
 <h2>Variables</h2> 
 
 In the console, you can use * / + - to do calculations.
 
     > 4*2 
-    > 8
+    [1] 8
 
 But, you can also use variables to get these answers. 
 
@@ -47,7 +47,7 @@ You can assign values to a variable with <- or =
 You can then recall that varibale by typing the name in the console 
 
     > x 
-    > 5 
+    [1] 5 
     
     
 After making that variable, it will appear in your environment on the righthand side
@@ -59,13 +59,13 @@ Let's do an example:
     > Height <- 4 
     > Width <- 2 
     > Height * Width 
-    > 8
+    [1] 8
 
 You can also assign that answer to a variable itself:
 
     > Area <- Height*Width 
     > Area 
-    > 8 
+    [1] 8 
         
 <h2>R Script</h2>
 
@@ -73,49 +73,89 @@ If you want to save your script to work on it later, you should make .R file. Do
 This is a text file with R commands where you can store all your code and can then “Run” it.
 Each line will be consecutively executed. You can go back and edit your script at a later date as well. 
 
-<h2>Types of Data<h2/>
-class() will reveal the type of data 
-Logicals
-class(TRUE)
-Logical 
+<h2>Types of Data</h2>
+
+The data stored in R can be classified as various types of data. Let's go over the most common types of data. Keep in mind that everything in R is an "Object". 
+
+Hint: if you are unsure what type your data is, use class() and put the data you're interested in inside the brackets.
+
+<h4> Logicals </h4>
+
+    > class(TRUE)
+    [1] Logical 
+
+This data is used in boolean operations. Logical data can only be the following: 
+
 TRUE (T),  FALSE (F), NA
-Used in boolean operations 
-Numeric
-2, 2.5
-Can perform regular arithmetic on it 
-subcategory : Integer 
+
+Example: 
+
+    > x <- 5
+    > x >= 4
+    [1] TRUE
+
+When we typed x >= 4 into the console, we are asking "Is x greater than or equal to 4?". R will then tell us that statment is TRUE.
+You can also substitute the full spelling of TRUE and FALSE with T and F.
+
+<h4> Numeric </h4>
+
+These are values such as 2 and 2.5
+Can perform regular arithmetic with these objects, like we have been doing earlier in the lesson. 
+
+<h4> Integer </h4>
 Can specify that the value is an integer by putting “L” after it 
-Ie: 
-X <- 2 
-Y <- 2L
-class(X)
-Numeric 
-class(Y)
-Integer 
-Another way to check: 
-is.numeric(X) TRUE is.numeric(Y) TRUE 
-is.integer(X) FALSE is.integer(Y) TRUE
-Other atomic types of variables: 
-Double: higher precision 
-Complex: complex numbers
-Raw: store raw bytes 
-Coercion 
- How to get between types of data 
-Use as._____() 
-Ie: as.numeric(TRUE) 
-1
-as.numeric(FALSE)
-0 
-This relationship is something I use in my own data research. You can easily check the number of times something occurs in you dataset by asking “are any of my variables > 5” for instance. You can then sum that logical statement to get how many times that statement was satisfied 
-as.character(4)
-“4”
-as.numeric(“4.5”)
-4.5
+
+    > x <- 2 
+    > y <- 2L
+    > class(x)
+    [1] numeric 
+    > class(y)
+    [1] integer 
+    
+Another way to check:
+
+    > is.numeric(x) 
+    [1] TRUE 
+    > is.numeric(y) 
+    [1] TRUE 
+    > is.integer(x) 
+    [1] FALSE 
+    > is.integer(y) 
+    [1] TRUE
+    
+<h4> Character </h4>
+
+These really can be anything as long as it is inside of quotation marks.
+"a","b","abc","42","Hello"
+
+<h4> Data coercion </h4>
+Coercion is term to describe switching between the types of data.
+
+To do this, use as._____()
+
+Example:
+
+    > as.numeric(TRUE) 
+    [1] 1
+    > as.numeric(FALSE)
+    [1] 0
+    
+Tip: This relationship is something I use in my own data research. You can easily check the number of times something occurs in you dataset by asking “are any of my variables > 5” for instance. You can then sum that logical statement to get how many times that statement was satisfied. We will do an example of this later.
+
+    > as.character(4)
+    [1] “4”
+    > as.numeric(“4.5”)
+    [1] 4.5
+    
 Sometimes, coercion between specific datatypes is NOT possible:
-as.numeric(“Hello”)
-NA
+    
+    > as.numeric(“Hello”)
+    [1] NA
+    
 R can’t convert this so it gives you “NA”/Not available/Not a Number 
-Vectors 
+
+<h2> Vectors </h2> 
+
 Use c() “concatenate”
 For instance, make a character vector as follows: 
 Suits <- c(“Diamonds”,”Hearts”,”Spades”,”Clubs”)

@@ -99,15 +99,15 @@ You can also substitute the full spelling of TRUE and FALSE with T and F.
 
 Here are all the boolean operators you can use: 
 
-- > greater than
-- < less than 
-- >= greater than or equal to
-- <= less than or equal to
-- == exactly equal to
-- != not equal to
-- !x not x
-- x|y x or y 
-- x&y x and y
+- greater than: >
+- less than: <
+- greater than or equal to: >=
+- less than or equal to: <=
+- exactly equal to: ==
+- not equal to: !=
+- not x: !x
+- x or y: x|y 
+- x and y: x&y 
 
 <h4> Numeric </h4>
 
@@ -115,11 +115,11 @@ These are values such as 2 and 2.5
 Can perform regular arithmetic with these objects, like we have been doing earlier in the lesson. 
 
 Here are all the arithmetic operators: 
-- + addition
-- - subtraction
-- / division
-- * multiplication
-- ^ OR ** exponential 
+- addition: +
+- subtraction: - 
+- division: /
+- multiplication: *
+- exponential: ^ OR **
 
 <h4> Integer </h4>
 Can specify that the value is an integer by putting “L” after it 
@@ -145,7 +145,7 @@ Another way to check:
 <h4> Character </h4>
 
 These really can be anything as long as it is inside of quotation marks.
-"a","b","abc","42","Hello"
+"a", "b", "abc", "42", "Hello"
 
 <h4> Data coercion </h4>
 Coercion is term to describe switching between the types of data.
@@ -179,9 +179,9 @@ So far, all the objects we have created at this point only contained one thing i
 
     > x <- c(1,2,3,4)
     > x
-    > [1] 1 2 3 4 
+    [1] 1 2 3 4 
     > length(x)
-    > [1] 4
+    [1] 4
     
 Tip: Instead of listing each number here, you can instead type 1:4 which means list every integer between 1 and 4. (Read it as "1 through 4")
     
@@ -193,7 +193,7 @@ If you try to put different types, R will automatically coerce the variables int
 
     > x <- c(7,4,”A”,10,”K”,3,2,”Q”)
     > x
-    > [1] “7” ”4” ”A” ...
+    [1] “7” ”4” ”A” ...
     
 All these elements have been coerced into characters 
 
@@ -204,9 +204,9 @@ To index, we have to use square brackets as opposed to the round brackets which 
 
     > x <- c(1,4,6,28)
     > x[1]
-    > [1] 1
+    [1] 1
     > x[3:4]
-    > [1] 6  28 
+    [1] 6  28 
     
 Now let’s get all of x EXCEPT the second element
 
@@ -214,40 +214,38 @@ Now let’s get all of x EXCEPT the second element
     > x[1,3,4]
     > # OR the simplest way:
     > x[-2]
-    > [1] 1  6  28 
+    [1] 1  6  28 
     
 You can also REASSIGN elements within a vector with indexing.
 Let's change the 2nd element to -99
 
     > x[2] <- -99 
     > x
-    > [1] 1 -99 6  28 
+    [1] 1 -99 6  28 
     > x[1:3] <- -99 
     > x
-    > [1] -99 -99 -99 28 
+    [1] -99 -99 -99 28 
     
 You can also index a vector by using a boolean operation rather than the element position.
 
     > x <- c(1:4)
     > x
-    > [1] 1 2 3 4
+    [1] 1 2 3 4
     > x[x>3]
-    > [1] 4 
+    [1] 4 
     
 The statement above reads like "x where x is greater than 3". R finds the values in your vector that satisfy the statment inside the square brackets.
    
     > x[x>=3] 
-    > [1] 3 4
+    [1] 3 4
     > x[x<2]
-    > [1] 1
+    [1] 1
     
 <h4> Putting it all together</h4>
  
-Let's do an example putting everything from this lesson together. In this scenario, we are going to try to count how cards of each suit remain in a deck of cards.To begin, make a character vector as follows: 
+Let's do an example putting everything from this lesson together. In this scenario, we are going to try to count how many cards of each suit remain in a deck of cards. To begin, make a character vector as follows: 
 
     > Suits <- c(“Diamonds”,”Hearts”,”Spades”,”Clubs”)
-    > is.vector(Suits)
-    > [1] TRUE
     
 The Suits vector lists all the suits in a deck. Let's also make a vector that tell us how many cards of each suit remain in the deck. We'll call this vector Remain. (Every deck of cards has 52 cards and each suit has 13 cards.)
 
@@ -255,13 +253,13 @@ The Suits vector lists all the suits in a deck. Let's also make a vector that te
     # OR 
     > Remain <- rep(13,4) #  repeat the element '13' 4 times
     > Remain 
-    > [1] 13 13 13 13
+    [1] 13 13 13 13
 
 The vector "Remain" doesn't tell us much information, but we can add labels to this vector to help organize. 
 
     > names(Remain) <- Suits
     > Suits
-    > Diamonds   Hearts   Spades    Clubs 
+     Diamonds   Hearts   Spades    Clubs 
       13         13       13        13 
     
 ALTERNATIVELY, do this WHILE you are making the vector:
@@ -278,9 +276,9 @@ Now we can index DrawnSuits and see how many of each suit were drawn out.
 
     > tmp <- DrawnSuits[DrawnSuits == "Diamonds"] # here, I used a temporary variable name. Sometimes, you will want to temporarily store information so you can used something like "tmp" that will likely get overwritten in your script. 
     > tmp 
-    > [1] "Diamonds" 
+    [1] "Diamonds" 
     > length(tmp)
-    > [1] 1
+    [1] 1
     
 Here, I indexed DrawnSuits by asking to pull out how many elements were called "Diamonds". I then stored that in the variable tmp and then found of the length of that variable. Now we can update the variable Remain to reflect the loss of one diamond card from the deck. 
 
@@ -301,7 +299,7 @@ Here, I indexed DrawnSuits by asking to pull out how many elements were called "
  
     > tmp <- DrawnSuits[DrawnSuits == "Hearts"] 
     > length(tmp)
-    > [1] 1
+    [1] 1
     > Remain["Hearts"] <-  Remain["Hearts"] - length(tmp)
     > Remain["Hearts"] 
       Hearts 
@@ -309,7 +307,7 @@ Here, I indexed DrawnSuits by asking to pull out how many elements were called "
 
      > tmp <- DrawnSuits[DrawnSuits == "Spades"] 
      > length(tmp)
-     > [1] 2
+     [1] 2
      > Remain["Spades"] <-  Remain["Spades"] - length(tmp)
      > Remain["Spades"] 
        Hearts 
@@ -317,11 +315,16 @@ Here, I indexed DrawnSuits by asking to pull out how many elements were called "
            
      > tmp <- DrawnSuits[DrawnSuits == "Clubs"] 
      > length(tmp)
-     > [1] 0
+     [1] 0
      > Remain["Clubs"] <-  Remain["Clubs"] - length(tmp)
      > Remain["Clubs"] 
        Hearts 
            13
+           
+     > Remain 
+     Diamonds   Hearts   Spades    Clubs 
+      12       12        11        13 
+     
            
 With this lesson, we have now covered the following topics: 
 - variables 

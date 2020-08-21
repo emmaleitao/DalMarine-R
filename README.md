@@ -13,8 +13,13 @@ If you missed a session, or wanted to go back and review the topics we covered, 
 Additionally, with each lesson an R script (.R) will be uploaded that contains all the code that we went through and learned about from that lesson. 
 
 <h2> Schedule </h2> 
+
 Lesson 1. R Basics : TBD 
+
 Lesson 2. Matricies, Data Frames, and Lists : TBD
+
 Lesson 3. For loops, While loops, If/Else Statements : TBD
+
 Lesson 4. Visualizing Data : TBD
+
 Lesson 5. Data Analysis and Statistics : TBD

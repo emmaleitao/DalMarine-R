@@ -26,7 +26,7 @@
 
 - dplyr 
 
--tidyr
+- tidyr
 
 <h4> Lesson 4. For loops, While loops, and if-else statements </h4>
 

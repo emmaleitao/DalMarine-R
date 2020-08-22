@@ -169,8 +169,71 @@ A data frame is a table or a two-dimensional matrix-like structure where each co
 To make a dataframe, use the function data.frame() 
 
     > df <- data.frame(
-        IDnumb = c(1117,7177,8125,3237,9017),
         Name = c("Jenner,K","Gates,B","Bezos,J","Zuckerburg,M", "Musk,E"), 
-        Age = c(23, 64, 56, 36, 49))
+        Age = c(23, 64, 56, 36, 49),
+        Height_m = c(1.68,1.77,1.71,1.71,1.88) )
         
+ Once you make the dataframe, you can use str() and summary() to learn more about your data. 
  
+    > str(df)
+    'data.frame':	5 obs. of  3 variables:
+    $ Name    : chr  "Jenner,K" "Gates,B" "Bezos,J" "Zuckerburg,M" ...
+    $ Age     : num  23 64 56 36 49
+    $ Height_m: num  1.68 1.77 1.71 1.71 1.88
+   
+    > summary(df)
+     Name                Age          Height_m   
+     Length:5           Min.   :23.0   Min.   :1.68  
+     Class :character   1st Qu.:36.0   1st Qu.:1.71  
+     Mode  :character   Median :49.0   Median :1.71  
+                        Mean   :45.6   Mean   :1.75  
+                        3rd Qu.:56.0   3rd Qu.:1.77  
+                        Max.   :64.0   Max.   :1.88 
+                        
+To extract specific columns, use $ 
+    
+    > all_ages <- df$Age
+    
+We can also index using the square brackets 
+
+    > df[1:2,]
+        Name   Age   Height_m
+    1 Jenner,K  23     1.68
+    2  Gates,B  64     1.77
+    
+    > df[,2:3]
+      Age   Height_m
+    1  23     1.68
+    2  64     1.77
+    3  56     1.71
+    4  36     1.71
+    5  49     1.88
+    
+    > df[c(1,3),c(1,3)] 
+          Name   Height_m
+    1 Jenner,K     1.68
+    3  Bezos,J     1.71
+    
+You can add a new column by using $ after your dataframe name and use a new column name 
+
+    > df$Birthday <- as.Date(c("1995-11-03","1955-10-28","1964-01-12","1984-05-14","1971-06-28"))
+
+To add more rows, you will need to have the additional rows prepared in another dataframe (with the same column names) and then use rbind() 
+
+    > df <- data.frame(
+        Name = c("Jenner,K","Gates,B","Bezos,J","Zuckerburg,M", "Musk,E"), 
+        Age = c(23, 64, 56, 36, 49),
+        Height_m = c(1.68,1.77,1.71,1.71,1.88))
+    > new_df <- data.frame(
+        Name = "Winfrey,O", 
+        Age = 66,
+        Height_m = 1.69)
+     > rbind(df,new_df)
+             Name  Age Height_m
+    1     Jenner,K  23     1.68
+    2      Gates,B  64     1.77
+    3      Bezos,J  56     1.71
+    4 Zuckerburg,M  36     1.71
+    5       Musk,E  49     1.88
+    6    Winfrey,O  66     1.69
+    

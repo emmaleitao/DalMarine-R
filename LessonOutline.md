@@ -18,7 +18,17 @@
 
 - lists 
 
-<h4> Lesson 3. For loops, While loops, and if-else statements </h4>
+<h4> Lesson 3. Data Wrangling, dplyr, and tidyr
+  
+- tbl's vs dataframes 
+
+- installing packages 
+
+- dplyr 
+
+-tidyr
+
+<h4> Lesson 4. For loops, While loops, and if-else statements </h4>
 
 - for loops 
 
@@ -26,13 +36,13 @@
 
 - if/else statements 
 
-<h4> Lesson 4. Visualizing data </h4>
+<h4> Lesson 5. Visualizing data </h4>
 
 - built in plot tools 
 
 - using ggplot2  
 
-<h4> Lesson 5. Data Analysis and Statistics</h4>
+<h4> Lesson 6. Data Analysis and Statistics</h4>
 
 - do an example of dealing with real life data 
 

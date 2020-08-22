@@ -123,6 +123,54 @@ If you want to have multidimensional data structure with different types of data
 
 R list is an object which contains elements of different types – like strings, numbers, vectors and another list inside it. R list can also contain a matrix or a function as its elements. The list is created using the list() function. In other words, a list is a generic vector containing other objects inside it.
 
+The advantage of having lists is that you can put multiple data types in one object. All you have to do is use the list() function, and list each element you want in the list, seperating the elements with a comma. 
+
+    > list_data <- list("Hello", c(5:10), TRUE, 101.1, matrix(1:6,nrow = 2))
+    
+If you wanted, you could even put a list within a list: 
+
+    > list_data <- list(c('Apr','May','Jun'),c(8,14,20),list('a','b',c(1,2,3)))
+    
+You can also add names to your list elements
+
+    > names(list_data) <- c("Months", "Temperature", "Inner List")
+    
+<h4> Indexing Lists </h4>
+
+We can index lists in two ways. First, we can use the same method as indexing vectors and matricies by putting the element position we are interested in in square brackets: 
+
+    > list_data[1]
+    $Months
+    [1] "Apr" "May" "Jun"
+    
+Another way is to use $ if you have named your list elements
+
+    > list_data$Months
+    [1] "Apr" "May" "Jun"
+  
+<h4> Adding, Deleting, and Editing list elements </h4> 
+
+You add a new list element by simpling indexing the last position + 1 and assigning your new element. By this, I mean that if your list has three elements, index the 4th element (3 + 1) and assign the new element 
+
+    > list_data[4] <- "abc"
+    
+You can then delete the element:
+
+    > list_data[4] <- NULL 
+    
+To edit a element already in the list, you can index the element in question and reassign your new data. 
+
+    > list_data[1] <- "updated element"
+    
 <h2> Data Frames </h2>
 
+A data frame is a table or a two-dimensional matrix-like structure where each column contains values of one variable and each row contains one set of values from each column. A key characteristic of dataframes is that each column has to have the same number elements.
 
+To make a dataframe, use the function data.frame() 
+
+    > df <- data.frame(
+        IDnumb = c(1117,7177,8125,3237,9017),
+        Name = c("Jenner,K","Gates,B","Bezos,J","Zuckerburg,M", "Musk,E"), 
+        Age = c(23, 64, 56, 36, 49))
+        
+ 

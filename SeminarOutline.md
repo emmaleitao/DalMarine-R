@@ -1,4 +1,4 @@
-<h2> Lesson Outline </h2> 
+<h2> Seminar Outline </h2> 
 
 <h4> Lesson 1. R Basics </h4>
 

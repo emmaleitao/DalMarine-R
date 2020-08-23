@@ -18,7 +18,7 @@
 
 - lists 
 
-<h4> Lesson 3. Data Wrangling, dplyr, and tidyr
+<h4> Lesson 3. Data Wrangling, dplyr, and tidyr </h4>
   
 - tbl's vs dataframes 
 

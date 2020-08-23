@@ -2,7 +2,7 @@
 
 Up until this point, we have primarily been working with the base functions already in the R language. However, people can create packages that you can download that contain useful functions. For any data science work, two useful packages to have installed are the dplyr and tidyr package. 
 
-We will go over some of the things you can do with these packages, but if you want some more explanations, check out these youtube tutorials by the creators of the packages themselves! 
+We will go over some of the things you can do with these packages, but if you want some more explanations, check out these youtube tutorials by the creators of the packages themselves! This lesson will cover the same content as presented in these videos. 
 
 https://www.youtube.com/watch?v=jOd65mR1zfw
 https://www.youtube.com/watch?v=1ELALQlO-yM
@@ -61,7 +61,7 @@ And with the pipe operator:
 	
 Here's a list of all the dplyr functions catagorized by what component of your dataframe you're manipulating
 
-< h5> Columns </h5>
+<h5> Columns </h5>
 
 select() changes whether or not a column is included. 
 
@@ -206,4 +206,17 @@ unite() does the opposite
 	
 Tip: the sep = "-" is indicating how R will recognize the seperation between each part of your observation. in seperate, you are telling R that the three values are seperated by a hyphen. R will then take the element and split the values into your new colunmns based on the placements of the hyphen. In unite, you are telling R to combine each column but seperate those values by a hyphen. Here, it could be any character of your choice. Commonly, you see hyphens, commas, spaces, or nothing. 
 	
-	
+<h4> Recap </h4>
+
+In this lesson, we went over 
+
+- installing packages
+- pipe syntax
+- dplyr 
+- tidyr 
+
+If you want more information on these two packages, check out these cheatsheets published by the creators of the package!
+
+tidyr: https://github.com/rstudio/cheatsheets/blob/master/data-import.pdf
+dplyr: https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf
+

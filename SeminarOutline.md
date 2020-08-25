@@ -14,15 +14,17 @@
 
 - Matricies 
 
-- Data frames 
+- Arrays
 
-- lists 
+- Lists 
+
+- Data frames 
 
 <h4> Lesson 3. Data Wrangling, dplyr, and tidyr </h4>
   
-- tbl's vs dataframes 
+- Tibbles
 
-- installing packages 
+- Installing packages 
 
 - dplyr 
 
@@ -30,11 +32,11 @@
 
 <h4> Lesson 4. For loops, While loops, and if-else statements </h4>
 
-- for loops 
+- If/else statements 
 
-- while loops 
+- For loops 
 
-- if/else statements 
+- While loops 
 
 <h4> Lesson 5. Visualizing data </h4>
 

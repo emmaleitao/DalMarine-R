@@ -30,6 +30,12 @@ On the top righthand side, you can see the Environment/History tabs. Under Envir
 Below the history and environment tabs, we have a bunch of miscellaneous tabs. First, the files tab shows you all of the files you can use and open. Here, you can load in any files, environments, datasets, etc. The plots tab will show you any plots you generate while working. The packages tab allows you to see what packages you have installed currently and can let you download/install any other ones you are interested in. The help tab can be used to search for anything in R that you want to learn more about. Alternatively, you can type a question mark before any command in the console and the help tab will automatically pull up that information for you. 
 
     > ?plot
+    
+<h2>R Script</h2>
+
+If you want to save your script to work on it later, you should make .R file. Do this by typing Ctrl + Shift + N and save your new file.
+This is a text file with R commands where you can store all your code and can then “Run” it.
+Each line will be consecutively executed. You can go back and edit your script at a later date as well. 
 
 <h2>Variables</h2> 
 
@@ -66,12 +72,7 @@ You can also assign that answer to a variable itself:
     > Area <- Height*Width 
     > Area 
     [1] 8 
-        
-<h2>R Script</h2>
 
-If you want to save your script to work on it later, you should make .R file. Do this by typing Ctrl + Shift + N and save your new file.
-This is a text file with R commands where you can store all your code and can then “Run” it.
-Each line will be consecutively executed. You can go back and edit your script at a later date as well. 
 
 <h2>Types of Data</h2>
 
@@ -84,45 +85,26 @@ Hint: if you are unsure what type your data is, use class() and put the data you
     > class(TRUE)
     [1] Logical 
 
-This data is used in boolean operations. Logical data can only be the following: 
+This data is the results of a comparison. Logical data can only be the following: 
 
 TRUE (T),  FALSE (F), NA
 
 Example: 
 
-    > x <- 5
-    > x >= 4
+    > x <- 5 
+    > x >= 4 # is x greater than or equal to 4?
     [1] TRUE
 
 When we typed x >= 4 into the console, we are asking "Is x greater than or equal to 4?". R will then tell us that statment is TRUE.
 You can also substitute the full spelling of TRUE and FALSE with T and F.
-
-Here are all the boolean operators you can use: 
-
-- greater than: >
-- less than: <
-- greater than or equal to: >=
-- less than or equal to: <=
-- exactly equal to: ==
-- not equal to: !=
-- not x: !x
-- x or y: x|y 
-- x and y: x&y 
 
 <h4> Numeric </h4>
 
 These are values such as 2 and 2.5
 Can perform regular arithmetic with these objects, like we have been doing earlier in the lesson. 
 
-Here are all the arithmetic operators: 
-- addition: +
-- subtraction: - 
-- division: /
-- multiplication: *
-- exponential: ^ OR **
-
 <h4> Integer </h4>
-Can specify that the value is an integer by putting “L” after it 
+Can specify that the value is an integer by putting “L” after it. Integers cannot contain decimals. 
 
     > x <- 2 
     > y <- 2L
@@ -226,7 +208,7 @@ Let's change the 2nd element to -99
     > x
     [1] -99 -99 -99 28 
     
-You can also index a vector by using a boolean operation rather than the element position.
+You can also index a vector by using a logical operation rather than the element position.
 
     > x <- c(1:4)
     > x
@@ -241,7 +223,39 @@ The statement above reads like "x where x is greater than 3". R finds the values
     > x[x<2]
     [1] 1
     
-<h4> Putting it all together</h4>
+<h2> Operators </h2> 
+
+<h4> Arithmetic Operators </h4>
+
+- addition: +
+- subtraction: - 
+- division: /
+- multiplication: *
+- exponential: ^ OR **
+- modulus: %% (remainder from division)
+- integer division: %/%
+
+<h4> Relational Operators </h4>
+
+- greater than: >
+- less than: <
+- greater than or equal to: >=
+- less than or equal to: <=
+- exactly equal to: ==
+- not equal to: !=
+- not x: !x
+
+<h4> Logical Operators </h4>
+
+- Logical NOT: !
+- Element-wise AND: & 
+- Logical AND: &&
+- Element-wise OR: | 
+- Logical OR: ||
+
+Operators & and | perform element-wise operation producing result having length of the longer operand. But && and || examines only the first element of the operands resulting into a single length logical vector. This may not make 100% sense right now, but we can return to this topic later. 
+    
+<h2> Cards Example </h2>
  
 Let's do an example putting everything from this lesson together. In this scenario, we are going to try to count how many cards of each suit remain in a deck of cards. To begin, make a character vector as follows: 
 
@@ -325,13 +339,6 @@ Here, I indexed DrawnSuits by asking to pull out how many elements were called "
      Diamonds   Hearts   Spades    Clubs 
       12       12        11        13 
      
-           
-With this lesson, we have now covered the following topics: 
-- variables 
-- writing R scripts 
-- types of data
-- vectors
 
-Next time, we will begin with matricies, and then start learning about for and while loops, and if/else statements. 
 
 

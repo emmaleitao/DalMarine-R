@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=Zc_ufg4uW4U
 
 Data wrangling is essentially the process of manipulating your raw data into something thats easy to read and work with. 
 
-<h4> dplyr </h4>
+<h2> dplyr </h2>
 
 to install packages, use the function install.packages() in your console. Make sure to put the package in quotes. To then use the package, use the library() function:
 
@@ -61,7 +61,7 @@ And with the pipe operator:
 	
 Here's a list of all the dplyr functions catagorized by what component of your dataframe you're manipulating
 
-<h5> Columns </h5>
+<h4> Columns </h4>
 
 select() changes whether or not a column is included. 
 
@@ -81,7 +81,7 @@ relocate() changes the order of the columns.
 
 	> relocate(starwars,homeworld:species, .before = height)
 
-<h5> Rows </h5>
+<h4> Rows </h4>
 
 filter() chooses rows based on column values.
 
@@ -99,7 +99,7 @@ slice() chooses rows based on location.
 	> slice_min(starwars,height) # row with the lowest height
 	> slice_max(starwars,height) # row with the largest height
 
-<h5> Groups of rows </h5>
+<h4> Groups of rows </h4>
 
 summarise() collapses a group into a single row.
 
@@ -117,7 +117,7 @@ This summary table doesn't tell us much about different types of cars. So you ca
 			  qs_75 = quantile(disp,0.75),
               n = n())
 
-<h4> tidyr </h4> 
+<h2> tidyr </h2> 
 
 	> install.packages("tidyr")
 	> library(tidyr)
@@ -206,15 +206,6 @@ unite() does the opposite
 	
 Tip: the sep = "-" is indicating how R will recognize the seperation between each part of your observation. in seperate, you are telling R that the three values are seperated by a hyphen. R will then take the element and split the values into your new colunmns based on the placements of the hyphen. In unite, you are telling R to combine each column but seperate those values by a hyphen. Here, it could be any character of your choice. Commonly, you see hyphens, commas, spaces, or nothing. 
 	
-<h4> Recap </h4>
-
-In this lesson, we went over 
-
-- installing packages
-- pipe syntax
-- dplyr 
-- tidyr 
-
 If you want more information on these two packages, check out these cheatsheets published by the creators of the package!
 
 tidyr: https://github.com/rstudio/cheatsheets/blob/master/data-import.pdf

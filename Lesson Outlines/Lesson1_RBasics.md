@@ -39,25 +39,21 @@ Each line will be consecutively executed. You can go back and edit your script a
 
 <h2>Variables</h2> 
 
-In the console, you can use * / + - to do calculations.
-
-    > 4*2 
-    [1] 8
-
-But, you can also use variables to get these answers. 
 
 You can assign values to a variable with <- or = 
 
     > x <- 5 
     
-You can then recall that varibale by typing the name in the console 
+A variable can be any text you want. You can then recall that varibale by typing the name in the console 
 
     > x 
     [1] 5 
     
+Keep in mind that variables are case sensitive. So, X and x are two different variables!
     
-After making that variable, it will appear in your environment on the righthand side.
-Print all variables by typing ls().
+After making your variable, it will appear in your environment on the righthand side.
+
+You can also print all variables by typing ls().
 This lists all variables but not their values. 
 
 Let's do an example:
@@ -72,13 +68,40 @@ You can also assign that answer to a variable itself:
     > Area <- Height*Width 
     > Area 
     [1] 8 
+    
+<h2> Functions </h2> 
 
+Functions are simply are commands that we can use to calculate specific outputs. There are many built-in functions in R (and in packages you can download) that we will use. You can also make your own functions, but for now, I want to introduce the structure and terminolofy of functions. 
+
+Let's do a small example where we want to calculate the mean of two numbers.
+
+    > x <- 3
+    > y <- 7
+    
+Our numbers are x and y. We can use the mean function: mean(). The "arguments" of this function go inside the brackets. Arguments essentially mena your inputs/specifications for the function. 
+
+    > mean(x,y) 
+    [1] 5
+
+Generally, its arguments constitute the input and their return values their output.
+
+Here are some common functions:
+
+- mean()
+- sd() - standard deviation
+- max()
+- min()
+- sum()
+- getwd() - returns current working directory
+- setwd() - sets current working directiory 
+
+As we work more in R and practice, we will see more functions and even begin to write our own! 
 
 <h2>Types of Data</h2>
 
 The data stored in R can be classified as various types of data. Let's go over the most common types of data. Keep in mind that everything in R is an "Object". 
 
-Hint: if you are unsure what type your data is, use class() and put the data you're interested in inside the brackets.
+Hint: if you are unsure what type your data is, use the function class() and put the data you're interested in inside the brackets.
 
 <h4> Logicals </h4>
 
@@ -126,7 +149,7 @@ Another way to check:
     
 <h4> Character </h4>
 
-These really can be anything as long as it is inside of quotation marks.
+These really can be anything as long as it is inside of quotation marks (single or double).
 "a", "b", "abc", "42", "Hello"
 
 <h4> Data coercion </h4>
@@ -141,7 +164,7 @@ Example:
     > as.numeric(FALSE)
     [1] 0
     
-Tip: This relationship is something I use in my own data research. You can easily check the number of times something occurs in you dataset by asking “are any of my variables > 5” for instance. You can then sum that logical statement to get how many times that statement was satisfied. We will do an example of this later.
+Tip: This relationship is something I use in my own data research. You can easily check the number of times something occurs in you dataset by asking “are any of my variables > 5” for instance. You can then sum that logical statement to get how many times that statement was satisfied. We can do an example of this later.
 
     > as.character(4)
     [1] “4”
@@ -208,7 +231,7 @@ Let's change the 2nd element to -99
     > x
     [1] -99 -99 -99 28 
     
-You can also index a vector by using a logical operation rather than the element position.
+You can also index a vector by using a logical/relational operation rather than the element position.
 
     > x <- c(1:4)
     > x

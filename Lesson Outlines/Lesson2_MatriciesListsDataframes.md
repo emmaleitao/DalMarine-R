@@ -116,7 +116,7 @@ Can also do it with dimnames function while making the matrix itself
 
     > m <-  matrix(1:6, nrow = 2, dimnames = list(c(“row1”,”row2”), c(“col1”,”col2”,”col3”)))
     
-<h2 Arrays </h2< 
+<h2 Arrays </h2>
 
 Arrays can be any dimension you want. While it may not be easy to visualize what a 3D or 4D array would look like, they are extremely useful for store large amounts of data. 
 

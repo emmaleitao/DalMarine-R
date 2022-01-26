@@ -12,6 +12,12 @@ Event page: https://www.facebook.com/events/382932459762393/
 
 Microsoft teams link: https://teams.microsoft.com/l/team/19%3a1e4c2c0c85c34886b8c120a24e84222e%40thread.tacv2/conversations?groupId=f2906565-24ee-4a5d-b978-fcb4165cd640&tenantId=60b81999-0b7f-412d-92a3-e17d8ae9e3e0
 
+<h2> Past Meetings </h2> 
+
+Lesson 1. https://web.microsoftstream.com/video/0245da48-5fb3-4788-9fe8-dfe4b250f629
+
+Lesson 2. https://web.microsoftstream.com/video/8b960221-063f-4757-88fc-877586e0ccd3
+
 
 <h2> Files </h2>
 
